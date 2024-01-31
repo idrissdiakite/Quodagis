@@ -35,7 +35,7 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 <a href="https://www.youtube.com/watch?v=C0axi9ZZrg0" target="_blank">demo</a>
 
-## [Accordéon/Parallax](https://github.com/idrissdiakite/quodagis/tree/main/accordion-parallax)
+## [Accordéon + Parallax](https://github.com/idrissdiakite/quodagis/tree/main/accordion-parallax)
 
 ![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/screenshot.png)
 
