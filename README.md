@@ -4,7 +4,7 @@
 
 Thème wordpress sur-mesure développé au sein de l'agence Digital Cover.
 
-À partir d'une maquette (Figma) réalisée par la directrice artistique, j'ai été en charge de tout le reste: mise en place du back-office (wordpress), intégration de la maquette, développement, recettage, animations, mises en ligne (preprod et prod) etc...
+À partir d'une maquette (Figma) réalisée par la directrice artistique, j'ai été en charge de tout le reste: mise en place du back-office (wordpress), intégration de la maquette, développement,  animations, recettage, mises en ligne (preprod et prod) etc...
 
 ## ⚙ Stack(s)
 
