@@ -1,0 +1,42 @@
+@use "../config" as *;
+
+.b-slider-content {
+  position: relative;
+  overflow: hidden;
+
+  &__shape {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    will-change: transform;
+
+    &.purple {
+      width: 68.6rem;
+      height: 85.6rem;
+      top: 20%;
+      left: 27rem;
+      background-color: $purple;
+      filter: blur(350px);
+    }
+
+    &.red {
+      width: 67.2rem;
+      height: 67.2rem;
+      bottom: 0;
+      left: 25%;
+      background-color: $red;
+      filter: blur(350px);
+    }
+  }
+
+  // ...
+}
+
+// La propriété blur n'est pas géré de la même manière sur tous les navigateurs
+// Pour coller au mieux au résultat attendu, sur firefox je réduis l'opacité des shapes
+@supports (#{$is-firefox}) {
+  .u-opacity {
+    opacity: 0.4 !important;
+  }
+}

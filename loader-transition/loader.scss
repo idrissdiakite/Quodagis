@@ -1,0 +1,64 @@
+@use "../config" as *;
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+  pointer-events: all;
+  z-index: $z-loader;
+
+  .image {
+    width: 48.4vw;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+
+    @include media-breakpoint-up(xl) { width: 28.4vw; }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  span {
+    height: 3rem;
+    width: 3rem;
+    background: rgb(179, 138, 209, 1);
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+
+    &::after,
+    &::before {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      height: 5rem;
+      width: 5rem;
+      background: rgb(179, 138, 209, 0.6);
+      z-index: 2;
+    }
+
+    &::after {
+      height: 7rem;
+      width: 7rem;
+      background: rgb(179, 138, 209, 0.4);
+      z-index: 2;
+    }
+  }
+}
+

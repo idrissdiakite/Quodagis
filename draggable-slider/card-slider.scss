@@ -1,0 +1,55 @@
+@use "../config" as *;
+
+.c-cards-slider {
+  margin: 5rem 0;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    margin: 10rem 0;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up(lg) { margin-bottom: 5rem; }
+
+    @include media-breakpoint-up(xl) { margin-bottom: 10rem; }
+  }
+
+  &__cursor {
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 14.7rem;
+      left: 42.15vw;
+      z-index: $z-header;
+      background-color: $purple;
+      border-radius: 50%;
+      width: 8.9rem;
+      height: 8.9rem;
+      pointer-events: none;
+    }
+  }
+
+  &__cards {
+    position: relative;
+    margin-top: 5rem;
+
+    @include media-breakpoint-up(xl) { margin-top: 0; }
+
+    .row { @include media-breakpoint-up(lg) { padding-right: 12rem; } }
+
+    .col-lg-10:not(:last-child) {
+      @include media-breakpoint-down(lg) { margin-bottom: 3rem !important; }
+    }
+
+    .c-card__content { user-select: none; }
+  }
+}

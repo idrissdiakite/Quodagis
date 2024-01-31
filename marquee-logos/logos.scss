@@ -1,0 +1,46 @@
+@use "../config" as *;
+
+.b-logos {
+  padding: 4rem 0;
+
+  &__titles {
+    margin: 4rem 0 6rem;
+
+    @include media-breakpoint-down(lg) { padding: 0 2rem; }
+
+    @include media-breakpoint-up(xl) { margin: 6rem 0 10rem; }
+
+    .e-title { @include media-breakpoint-down(lg) { margin-bottom: 2.5rem; } }
+  }
+
+  &__wrapper {
+    border-top: $b-dashed;
+    border-bottom: $b-dashed;
+    padding: 4.5rem 0;
+    height: 18.75vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+
+  &__logo {
+    width: 190px;
+    padding-right: 40px;
+    filter: grayscale(100%);
+    position: absolute;
+
+    @include media-breakpoint-up(xxl) { padding-right: 50px; }
+
+    .image {
+      img { object-fit: contain; }
+
+      svg { height: auto; }
+    }
+  }
+}

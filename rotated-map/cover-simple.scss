@@ -1,0 +1,69 @@
+@use "../config" as *;
+
+.b-cover-simple {
+  height: 100vh;
+  padding: 30% 2rem;
+  position: relative;
+  background-color: $cover-white;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) { padding: 20% 2rem; }
+
+  @include media-breakpoint-up(lg) { padding: 20% 0 10%; }
+
+  @include media-breakpoint-up(xl) { padding: 13.9rem 0 17rem; }
+
+  &-shapes {
+    position: relative;
+  }
+
+  &__shape {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 51.1rem;
+    height: 51.1rem;
+    z-index: 0;
+    will-change: transform;
+
+    &.purple {
+      top: 39.8rem;
+      left: 10.5rem;
+      background-color: $purple;
+      filter: blur(192px);
+    }
+
+    &.red {
+      top: 35rem;
+      left: 61.7rem;
+      background-color: $red;
+      filter: blur(252px);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+    z-index: 1;
+
+    @include media-breakpoint-up(md) { margin-bottom: 7.5rem; }
+
+    @include media-breakpoint-up(lg) { margin-bottom: 20rem; }
+
+    @include media-breakpoint-up(xl) { margin-bottom: 5rem; }
+
+    @include h1-bis;
+  }
+
+  &__image {
+    object-fit: cover;
+    z-index: 1;
+
+    @include media-breakpoint-down(md) { margin: 3rem 0; }
+
+    @include media-breakpoint-up(lg) { padding: 0 15vw; }
+
+    @include media-breakpoint-up(xl) { padding: 0; }
+  }
+}
