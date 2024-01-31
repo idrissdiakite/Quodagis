@@ -1,0 +1,41 @@
+@use "../config" as *;
+
+.b-cards {
+  padding: 0 2rem;
+  margin: 5rem 0;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    margin: 10rem 0;
+  }
+
+  &.vertical {
+    .row {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .b-cards__title {
+      margin-bottom: 3rem;
+
+      @include media-breakpoint-up(md) { margin-bottom: 4rem; }
+
+      @include media-breakpoint-up(lg) { margin-bottom: 0; }
+    }
+  }
+
+  &.horizontal {
+    .b-cards__title {
+      margin-bottom: 3rem;
+
+      @include media-breakpoint-up(lg) { margin-bottom: 5rem; }
+
+      @include media-breakpoint-up(xl) { margin-bottom: 10rem; }
+    }
+
+    .b-cards__cards {
+      height: 100%;
+    }
+  }
+}
