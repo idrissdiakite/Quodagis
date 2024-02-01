@@ -32,6 +32,8 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 **Description** 
 
+Affichage et animation du logo Quodagis (svg) sous forme de loader lorsqu'on arrive pour la première fois sur le site ([Loader.js](https://github.com/idrissdiakite/quodagis/blob/main/loader-transition/Loader.js)) + mise en place d'une transition lorsqu'on change de page ([Transition.js](https://github.com/idrissdiakite/quodagis/blob/main/loader-transition/Transition.js)). Pour l'effet de transition, j'ai placé un cercle (span) au centre de l'écran avec une opacité à 1 ainsi qu'un before et un after avec une opacité moindre; Puis avec gsap je scale (jusqu'à 60) ce dernier pour obtenir l'effet d'aggrandissement.
+
 
 <a href="https://www.youtube.com/watch?v=C0axi9ZZrg0" target="_blank">demo</a>
 
@@ -41,6 +43,11 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 **Description** 
 
+Présentation des différents services de Quodagis sous forme d'accordéon: de base j'affiche uniquement le titre de chaque item et au survol avec la souris (ou au click sur mobile) cela laisse apparaitre en dessous son contenu. Pour réaliser cette animation, j'ai attribué la propriété *max-height: 0* à tous les contenus puis en js, je récupère la hauteur du contenu survolé/clické (*this.$contents[i].scrollHeight*) que j'applique ensuite à la propriété max-height du contenu grace à Gsap.
+
+Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/Parallax.js) et à la propriété *data-parallax="-1"* appliquée directement à la div **b-services__right** ([Parallax.js](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/our-services.blade.php)), j'ai également rajouté un effet de parallax sur l'image située à droite de l'accordéon afin d'améliorer l'expérience utilisateur (l'image translate sur y au scroll).
+
+À noter que l'effet bicolore sur les titres a été obtenu grace à la propriété *background-clip: text* combinée à *text-fill-color: transparent* et *background: linear-gradient*.
 
 <a href="https://www.youtube.com/watch?v=kxpsIvphKhE" target="_blank">demo</a>
 
