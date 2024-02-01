@@ -58,6 +58,7 @@ Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quoda
 
 **Description** 
 
+Mise en place d'un custom cursor sur l'ensemble du site avec différentes variations (en jouant notamment sur le *mix-blend-mode*) en fonction du type d'élément/block survolé. Animations entièrement gérées avec Gsap dans le fichier [Cursor.js](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor).
 
 <a href="https://www.youtube.com/watch?v=MFWeNpUYQeo" target="_blank">demo</a>
 
