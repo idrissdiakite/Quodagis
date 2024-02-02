@@ -92,7 +92,7 @@ Présentation de logos partenaires sous forme de marquee (défilement en continu
 
 **Description** 
 
-Sur la page **implantations**, Quodagis souhaitait afficher en cover uniquement un titre ainsi qu'une moitié de map monde. Bénéficiant toutefois en asset de la map monde entière et pour ajouter un peu de dynamisme à la page, j'ai mis en place un effet de rotation sur la map lorsqu'on scroll aussi bien vers le haut que le bas. Pour cela, j'ai utilisé gsap et plus particulièrement scrolltrigger et notamment sa propriété "scrub" qui permet de lier un élément (ici *.b-cover-simple__image svg*) au scroll.
+Sur la page **implantations**, Quodagis souhaitait afficher en cover uniquement un titre ainsi qu'une moitié de map monde. Bénéficiant toutefois en asset de la map monde entière et pour ajouter un peu de dynamisme à la page, j'ai mis en place un effet de rotation sur la map lorsqu'on scroll aussi bien vers le haut que le bas. Pour cela, j'ai utilisé gsap et plus particulièrement scrolltrigger et notamment sa propriété "scrub" qui permet de lier un élément (*.b-cover-simple__image svg*) au scroll.
 
 <a href="https://www.youtube.com/watch?v=dwmKmLvBkD8" target="_blank">demo</a>
 
