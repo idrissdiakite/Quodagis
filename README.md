@@ -37,6 +37,19 @@ Affichage et animation du logo Quodagis (svg) sous forme de loader lorsqu'on arr
 
 <a href="https://www.youtube.com/watch?v=C0axi9ZZrg0" target="_blank">demo</a>
 
+## [Moving shapes](https://github.com/idrissdiakite/quodagis/tree/main/moving-shapes)
+
+![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/moving-shapes/screenshot.png)
+
+**Description** 
+
+Une des animation principale demandée et attendue sur le site était d'avoir en background et sur plusieurs blocks, 2 shapes mouvantes de taille plus ou moins égales mais de couleurs différentes (rouge et violette). Après avoir initialement placé en absolute les 2 shapes dans le block concerné, en javascript je récupère dans un premier temps l'*offsetWidth* et l'*offsetHeight* de chacune des shapes et du conteneur puis ensuite avec gsap, je modifie aléatoirement (grâce à la fonction **Math.random()**) la position (*top*, *left*, *bottom*) de chacune des shapes. Pour un rendu plus fluide, j'applique un *ease: power0* à l'animation ainsi qu'une durée plus longue à la shape violette. Enfin, grâce à la fonction **onComplete()** de gsap, une fois l'animation terminée, je relance cette dernière ce qui va donner cet effet de déplacement aléatoire des shapes en continu.
+
+Pour une question de performance, la fonction **animShape()** est déclenchée uniquement lorsque le "block" est **in-view** et stoppée lorsque celui est **destroy**. À noter que pour avoir un effet "pastel" des shapes, un *filter: blur* a été applliqué en css aux différentes shapes. Néanmoins, lors du recettage je me suis apercu que la propriété filter et blur n'était pas du tout géré et rendu de la même manière en fonction des navigateurs. En effet, sur Firefox notamment, malgrés le blur le rendu des shapes était beaucoup trop prononcé c'est pourquoi j'ai appliqué une *opacité: 0.4* au conteneur (uniquement sur firefox) afin de coller au mieux au résultat attendu (voire [slider-content.scss](https://github.com/idrissdiakite/quodagis/blob/main/moving-shapes/slider-content.scss))
+
+
+<a href="https://www.youtube.com/watch?v=GCUl6THY2h4" target="_blank">demo</a>
+
 ## [Accordéon + Parallax](https://github.com/idrissdiakite/quodagis/tree/main/accordion-parallax)
 
 ![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/screenshot.png)
@@ -58,25 +71,18 @@ Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quoda
 
 **Description** 
 
-Mise en place d'un custom cursor sur l'ensemble du site avec différentes variations (en jouant notamment sur le *mix-blend-mode*) en fonction du type d'élément/block survolé. Animations entièrement gérées avec Gsap dans le fichier [Cursor.js](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor).
+Mise en place d'un custom cursor sur l'ensemble du site avec différentes variations (en jouant notamment sur le *mix-blend-mode*) en fonction du type d'élément/block survolé (cf. footer, menu, images etc..). Animations entièrement gérées avec Gsap dans le fichier [Cursor.js](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor).
 
 <a href="https://www.youtube.com/watch?v=MFWeNpUYQeo" target="_blank">demo</a>
 
-
-
-## [Slider (drag'n'drop)](https://github.com/idrissdiakite/quodagis/tree/main/draggable-slider)
-
-![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/draggable-slider/screenshot.png)
-
-**Description** 
-
-<a href="https://www.youtube.com/watch?v=wsVDNjBv-ug" target="_blank">demo</a>
 
 ## [Marquee](https://github.com/idrissdiakite/quodagis/tree/main/marquee-logos)
 
 ![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/marquee-logos/screenshot.png)
 
 **Description** 
+
+Présentation de logos partenaires sous forme de marquee (défilement en continu). La difficulté ici à été de trouver le moyen de rendre pleinement fonctionnel et responsive le marquee quelque soit la taille d'écran ou bien encore le nombre de logos. 
 
 <a href="https://www.youtube.com/watch?v=FMH0rG63Zzo" target="_blank">demo</a>
 
@@ -86,15 +92,17 @@ Mise en place d'un custom cursor sur l'ensemble du site avec différentes variat
 
 **Description** 
 
+Sur la page **implantations**, Quodagis souhaitait afficher en cover uniquement un titre ainsi qu'une moitié de map monde. Bénéficiant toutefois en asset de la map monde entière et pour ajouter un peu de dynamisme à la page, j'ai mis en place un effet de rotation sur la map lorsqu'on scroll aussi bien vers le haut que le bas. Pour cela, j'ai utilisé gsap et plus particulièrement scrolltrigger et notamment sa propriété "scrub" qui permet de lier un élément (ici *.b-cover-simple__image svg*) au scroll.
+
 <a href="https://www.youtube.com/watch?v=dwmKmLvBkD8" target="_blank">demo</a>
 
-## [Moving shapes](https://github.com/idrissdiakite/quodagis/tree/main/moving-shapes)
+## [Slider (drag'n'drop)](https://github.com/idrissdiakite/quodagis/tree/main/draggable-slider)
 
-![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/moving-shapes/screenshot.png)
+![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/draggable-slider/screenshot.png)
 
 **Description** 
 
-<a href="https://www.youtube.com/watch?v=GCUl6THY2h4" target="_blank">demo</a>
+<a href="https://www.youtube.com/watch?v=wsVDNjBv-ug" target="_blank">demo</a>
 
 
 ## 💫 Live
