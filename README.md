@@ -37,6 +37,16 @@ Affichage et animation du logo Quodagis (svg) sous forme de loader lorsqu'on arr
 
 <a href="https://www.youtube.com/watch?v=C0axi9ZZrg0" target="_blank">demo</a>
 
+## [Custom Cursor](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor)
+
+![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/custom-cursor/screenshot.png)
+
+**Description** 
+
+Mise en place d'un custom cursor sur l'ensemble du site avec différentes variations (en jouant notamment sur le *mix-blend-mode*) en fonction du type d'élément/block survolé (cf. footer, menu, images etc..). Animations entièrement gérées avec Gsap dans le fichier [Cursor.js](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor).
+
+<a href="https://www.youtube.com/watch?v=MFWeNpUYQeo" target="_blank">demo</a>
+
 ## [Moving shapes](https://github.com/idrissdiakite/quodagis/tree/main/moving-shapes)
 
 ![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/moving-shapes/screenshot.png)
@@ -46,7 +56,6 @@ Affichage et animation du logo Quodagis (svg) sous forme de loader lorsqu'on arr
 Une des animation principale demandée et attendue sur le site était d'avoir en background et sur plusieurs blocks, 2 shapes mouvantes de taille plus ou moins égales mais de couleurs différentes (rouge et violette). Après avoir initialement placé en absolute les 2 shapes dans le block concerné, en javascript je récupère dans un premier temps l'*offsetWidth* et l'*offsetHeight* de chacune des shapes et du conteneur puis ensuite avec gsap, je modifie aléatoirement (grâce à la fonction **Math.random()**) la position (*top*, *left*, *bottom*) de chacune des shapes. Pour un rendu plus fluide, j'applique un *ease: power0* à l'animation ainsi qu'une durée plus longue à la shape violette. Enfin, grâce à la fonction **onComplete()** de gsap, une fois l'animation terminée, je relance cette dernière ce qui va donner cet effet de déplacement aléatoire des shapes en continu.
 
 Pour une question de performance, la fonction **animShape()** est déclenchée uniquement lorsque le "block" est **in-view** et stoppée lorsque celui est **destroy**. À noter que pour avoir un effet "pastel" des shapes, un *filter: blur* a été applliqué en css aux différentes shapes. Néanmoins, je me suis aperçu que les couleurs et la propriété filter/blur n'était pas du tout géré et rendu de la même manière en fonction des navigateurs. En effet, sur Firefox notamment, le rendu des shapes était beaucoup trop prononcé c'est pourquoi j'ai appliqué une *opacité: 0.4* au conteneur (uniquement sur Firefox) afin de coller au mieux au résultat attendu (voire [slider-content.scss](https://github.com/idrissdiakite/quodagis/blob/main/moving-shapes/slider-content.scss))
-
 
 <a href="https://www.youtube.com/watch?v=GCUl6THY2h4" target="_blank">demo</a>
 
@@ -63,17 +72,6 @@ Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quoda
 À noter que l'effet bicolore sur les titres a été obtenu grace à la propriété *background-clip: text* combinée à *text-fill-color: transparent* et *background: linear-gradient*.
 
 <a href="https://www.youtube.com/watch?v=kxpsIvphKhE" target="_blank">demo</a>
-
-
-## [Custom Cursor](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor)
-
-![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/custom-cursor/screenshot.png)
-
-**Description** 
-
-Mise en place d'un custom cursor sur l'ensemble du site avec différentes variations (en jouant notamment sur le *mix-blend-mode*) en fonction du type d'élément/block survolé (cf. footer, menu, images etc..). Animations entièrement gérées avec Gsap dans le fichier [Cursor.js](https://github.com/idrissdiakite/quodagis/tree/main/custom-cursor).
-
-<a href="https://www.youtube.com/watch?v=MFWeNpUYQeo" target="_blank">demo</a>
 
 
 ## [Marquee](https://github.com/idrissdiakite/quodagis/tree/main/marquee-logos)
