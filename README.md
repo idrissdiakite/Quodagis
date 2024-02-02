@@ -58,7 +58,7 @@ Pour une question de performance, la fonction **animShape()** est déclenchée u
 
 Présentation des différents services de Quodagis sous forme d'accordéon: de base j'affiche uniquement le titre de chaque item et au survol avec la souris (ou au click sur mobile) cela laisse apparaitre en dessous son contenu. Pour réaliser cette animation, j'ai attribué la propriété *max-height: 0* à tous les contenus puis en js, je récupère la hauteur du contenu survolé/clické (*this.$contents[i].scrollHeight*) que j'applique ensuite à la propriété max-height du contenu grace à Gsap.
 
-Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/Parallax.js) et à la propriété *data-parallax="-1"* appliquée directement à la div **b-services__right** ([Parallax.js](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/our-services.blade.php)), j'ai également rajouté un effet de parallax sur l'image située à droite de l'accordéon afin d'améliorer l'expérience utilisateur (l'image translate sur y au scroll).
+Grâce à la classe javascript [Parallax](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/Parallax.js) et à la propriété *data-parallax="-1"* appliquée directement à la div **b-services__right** ([our-services.blade.php](https://github.com/idrissdiakite/quodagis/blob/main/accordion-parallax/our-services.blade.php)), j'ai également rajouté un effet de parallax sur l'image située à droite de l'accordéon afin d'améliorer l'expérience utilisateur (l'image translate sur y au scroll).
 
 À noter que l'effet bicolore sur les titres a été obtenu grace à la propriété *background-clip: text* combinée à *text-fill-color: transparent* et *background: linear-gradient*.
 
