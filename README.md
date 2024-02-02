@@ -96,15 +96,7 @@ Sur la page **implantations**, Quodagis souhaitait afficher en cover uniquement 
 
 <a href="https://www.youtube.com/watch?v=dwmKmLvBkD8" target="_blank">demo</a>
 
-## [Slider (drag'n'drop)](https://github.com/idrissdiakite/quodagis/tree/main/draggable-slider)
 
-![Screenshot](https://github.com/idrissdiakite/quodagis/blob/main/draggable-slider/screenshot.png)
-
-**Description** 
-
-<a href="https://www.youtube.com/watch?v=wsVDNjBv-ug" target="_blank">demo</a>
-
-
-## 💫 Live
+## 🚀 Live
 
 [https://quodagis.fr/](https://quodagis.fr/)
